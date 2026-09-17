@@ -24,6 +24,5 @@ def create_message(sender, to, subject, body_text):
 
 def send_message(service, user_id, message):
     return service.users().messages().send(userId=user_id, body=message).execute()
-
 msg = create_message("me", "recipient@example.com", "Test Subject", "Hello from Gmail API!")
 send_message(service, "me", msg)
